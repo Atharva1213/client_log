@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 
-export const ShowErrorMessage = (error) => {
+export const ShowErrorMessage = (error) => { 
+  console.log(error);
   if (error.status === 401) window.location.href = '/';
   else
     toast.error(error.response.data.message, {
